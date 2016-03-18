@@ -1,6 +1,6 @@
 # WPF Html Editor
 
-This library provides an open, free, and purely WPF editor for HTML data. This library is based upon the code written and provided by Yannick Turbang at [C# WPF WYSIWYG HTML Editor](http://www.codeproject.com/Tips/870549/Csharp-WPF-WYSIWYG-HTML-Editor) on CodeProject.
+This library provides an open, free, and purely WPF editor for HTML code. This library is based upon the code written and provided by Yannick Turbang at [C# WPF WYSIWYG HTML Editor](http://www.codeproject.com/Tips/870549/Csharp-WPF-WYSIWYG-HTML-Editor) on CodeProject. Yannick Turbang's contribution is provided under the [Code Project Open License](http://www.codeproject.com/info/cpol10.aspx).
 
 ### About this library
 
