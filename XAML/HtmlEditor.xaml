@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="WPF_WYSIWYG_HTML_Editor.HtmlEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <RichTextBox x:Name="Editor" VerticalScrollBarVisibility="Visible">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </RichTextBox.Resources>
+        </RichTextBox>
+
+    </Grid>
+</UserControl>

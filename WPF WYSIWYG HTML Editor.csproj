@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13A55AE8-28AB-4DDB-9BC3-BABFD7D64FEA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WPF_WYSIWYG_HTML_Editor</RootNamespace>
+    <AssemblyName>WPF WYSIWYG HTML Editor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Core\DialogBox.cs" />
+    <Compile Include="Core\Format.cs" />
+    <Compile Include="Core\Gui.cs" />
+    <Compile Include="Core\HideScriptErrors.cs" />
+    <Compile Include="Core\Initialisation.cs" />
+    <Compile Include="XAML\Image.xaml.cs">
+      <DependentUpon>Image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="XAML\Link.xaml.cs">
+      <DependentUpon>Link.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XAML\HtmlEditor.xaml.cs">
+      <DependentUpon>HtmlEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XAML\WebBrowser.xaml.cs">
+      <DependentUpon>WebBrowser.xaml</DependentUpon>
+    </Compile>
+    <Page Include="XAML\Image.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XAML\Link.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XAML\HtmlEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XAML\WebEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Items.cs" />
+    <Compile Include="XAML\WebEditor.xaml.cs">
+      <DependentUpon>WebEditor.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="XAML\WebBrowser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bullets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\backcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\UnderLine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RightAlign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\OutIdent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Numbered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LeftAlign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\italic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ident.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\center2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\html.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Editor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\New.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
