@@ -87,7 +87,7 @@ namespace WPF_WYSIWYG_HTML_Editor
 
         private void RibbonButtonOpenweb_Click(object sender, RoutedEventArgs e)
         {
-            webBrowserEditor.newWb(@"http://www.codeproject.com/");
+            webBrowserEditor.newWb(@"https://www.codeproject.com/tips/870549/csharp-wpf-wysiwyg-html-editor/");
         }
 
         private void SettingsFontColor_Click(object sender, RoutedEventArgs e)
