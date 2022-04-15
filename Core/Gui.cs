@@ -86,7 +86,7 @@ namespace WPF_WYSIWYG_HTML_Editor
             var htmlText = doc.documentElement.InnerHtml;
             string path = DialogBox.SaveFile();
             if (path != "")
-                File.WriteAllText(DialogBox.SaveFile(), htmlText);
+                File.WriteAllText(path, htmlText);
         }
 
         public static void RibbonComboboxFonts(ComboBox RibbonComboboxFonts)
@@ -145,7 +145,12 @@ namespace WPF_WYSIWYG_HTML_Editor
 
         public static void newdocumentFile()
         {
-            webBrowser.newWb(DialogBox.SelectFile());    
+            // check that a file was targeted for open (dialog returns null if the user cancels)
+            string fileContent = DialogBox.SelectFile();
+            if (fileContent != null)
+            {
+                webBrowser.newWb(fileContent);
+            }
         }
 
 

@@ -34,9 +34,7 @@ namespace WPF_WYSIWYG_HTML_Editor
         {
             using (System.Windows.Forms.OpenFileDialog openFileDialog = new System.Windows.Forms.OpenFileDialog())
             {
-                openFileDialog.InitialDirectory = @"C:\";
-                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-                openFileDialog.FilterIndex = 2; //Dans ce cas ci le filtre *.* sera sÃƒÂ©lectionnÃƒÂ©
+                openFileDialog.Filter = "Html files (*.htm,*.html)|*.htm;*.html";
                 openFileDialog.RestoreDirectory = true;
 
                 System.Windows.Forms.DialogResult result = openFileDialog.ShowDialog();
@@ -44,7 +42,7 @@ namespace WPF_WYSIWYG_HTML_Editor
                 {
                     return openFileDialog.FileName;
                 }
-                return "";
+                return null;
             }
 
         }
@@ -54,9 +52,7 @@ namespace WPF_WYSIWYG_HTML_Editor
         {
             using (System.Windows.Forms.SaveFileDialog SaveFileDialog = new System.Windows.Forms.SaveFileDialog())
             {
-
-                SaveFileDialog.InitialDirectory = @"C:\";
-                SaveFileDialog.Filter = "txt files (*.htm)|*.htm|All files (*.html)|*.html";
+                SaveFileDialog.Filter = "Htm files (*.htm)|*.htm|Html files (*.html)|*.html";
                 SaveFileDialog.FilterIndex = 2;
                 SaveFileDialog.RestoreDirectory = true;
 
