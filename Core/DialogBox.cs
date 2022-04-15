@@ -42,7 +42,7 @@ namespace WPF_WYSIWYG_HTML_Editor
                 {
                     return openFileDialog.FileName;
                 }
-                return "";
+                return null;
             }
 
         }
