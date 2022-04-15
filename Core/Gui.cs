@@ -86,7 +86,7 @@ namespace WPF_WYSIWYG_HTML_Editor
             var htmlText = doc.documentElement.InnerHtml;
             string path = DialogBox.SaveFile();
             if (path != "")
-                File.WriteAllText(DialogBox.SaveFile(), htmlText);
+                File.WriteAllText(path, htmlText);
         }
 
         public static void RibbonComboboxFonts(ComboBox RibbonComboboxFonts)
